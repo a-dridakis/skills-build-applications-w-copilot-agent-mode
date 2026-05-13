@@ -7,10 +7,9 @@ function Users() {
 
   useEffect(() => {
     async function fetchUsers() {
-      const baseUrl = process.env.REACT_APP_CODESPACE_NAME
-        ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev`
-        : 'http://localhost:8000';
-      const endpoint = `${baseUrl}/api/users/`;
+      const endpoint = process.env.REACT_APP_CODESPACE_NAME
+        ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/users/`
+        : 'http://localhost:8000/api/users/';
       console.log('Users endpoint:', endpoint);
       try {
         const response = await fetch(endpoint);

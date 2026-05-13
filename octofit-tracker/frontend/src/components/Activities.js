@@ -7,10 +7,9 @@ function Activities() {
 
   useEffect(() => {
     async function fetchActivities() {
-      const baseUrl = process.env.REACT_APP_CODESPACE_NAME
-        ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev`
-        : 'http://localhost:8000';
-      const endpoint = `${baseUrl}/api/activities/`;
+      const endpoint = process.env.REACT_APP_CODESPACE_NAME
+        ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/activities/`
+        : 'http://localhost:8000/api/activities/';
       console.log('Activities endpoint:', endpoint);
       try {
         const response = await fetch(endpoint);

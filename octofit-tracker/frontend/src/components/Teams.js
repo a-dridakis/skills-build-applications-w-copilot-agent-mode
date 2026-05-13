@@ -7,10 +7,9 @@ function Teams() {
 
   useEffect(() => {
     async function fetchTeams() {
-      const baseUrl = process.env.REACT_APP_CODESPACE_NAME
-        ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev`
-        : 'http://localhost:8000';
-      const endpoint = `${baseUrl}/api/teams/`;
+      const endpoint = process.env.REACT_APP_CODESPACE_NAME
+        ? `https://${process.env.REACT_APP_CODESPACE_NAME}-8000.app.github.dev/api/teams/`
+        : 'http://localhost:8000/api/teams/';
       console.log('Teams endpoint:', endpoint);
       try {
         const response = await fetch(endpoint);
