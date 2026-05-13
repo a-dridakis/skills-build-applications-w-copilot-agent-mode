@@ -1,0 +1,251 @@
+/* ═══════════════════════════════════════════════════════════
+   OctoFit Tracker – global theme
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  --of-navy:      #0a2540;
+  --of-blue:      #0d6efd;
+  --of-blue-light:#3a8ffe;
+  --of-teal:      #20c997;
+  --of-teal-dark: #12a37a;
+  --of-bg:        #eef2f7;
+  --of-surface:   #ffffff;
+  --of-text:      #1e293b;
+  --of-muted:     #64748b;
+  --of-border:    #cbd5e1;
+
+  /* semantic aliases */
+  --of-heading-color: var(--of-navy);
+  --of-link-color:    var(--of-blue);
+  --of-link-hover:    var(--of-teal-dark);
+}
+
+/* ── Base ────────────────────────────────────────────────── */
+body {
+  background-color: var(--of-bg);
+  color: var(--of-text);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--of-heading-color);
+  font-weight: 700;
+}
+
+a {
+  color: var(--of-link-color);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--of-link-hover);
+  text-decoration: underline;
+}
+
+/* ── Top navbar ─────────────────────────────────────────── */
+.octofit-navbar {
+  background: linear-gradient(135deg, var(--of-navy) 0%, #1a3a5c 100%);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.octofit-navbar .octofit-brand-logo {
+  height: 48px;
+  width: auto;
+  /* crisp on all screens */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+.octofit-navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.octofit-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.82) !important;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.octofit-navbar .nav-link:hover {
+  background-color: rgba(32, 201, 151, 0.22);
+  color: #fff !important;
+}
+
+.octofit-navbar .nav-link.active {
+  background-color: var(--of-teal);
+  color: #fff !important;
+  font-weight: 600;
+}
+
+.octofit-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.octofit-navbar .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* ── Page wrapper ───────────────────────────────────────── */
+.octofit-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem 4rem;
+}
+
+/* ── Section cards ──────────────────────────────────────── */
+.octofit-card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(10, 37, 64, 0.10);
+  background-color: var(--of-surface);
+  overflow: hidden;
+}
+
+.octofit-card .card-header {
+  background: linear-gradient(90deg, var(--of-navy) 0%, #1c4a7a 100%);
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 0.8rem 1.4rem;
+  letter-spacing: 0.3px;
+  border-bottom: 3px solid var(--of-teal);
+}
+
+/* ── Bootstrap table overrides ──────────────────────────── */
+.octofit-table {
+  --bs-table-striped-bg: #f0f6ff;
+  --bs-table-hover-bg:   #dbeafe;
+  color: var(--of-text);
+}
+
+.octofit-table thead th {
+  background-color: var(--of-navy);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border-bottom: 2px solid var(--of-teal);
+  white-space: nowrap;
+}
+
+.octofit-table tbody td {
+  vertical-align: middle;
+  border-color: var(--of-border);
+}
+
+.octofit-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── Bootstrap button overrides ─────────────────────────── */
+.btn-primary {
+  background-color: var(--of-blue);
+  border-color: var(--of-blue);
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.btn-success {
+  background-color: var(--of-teal);
+  border-color: var(--of-teal);
+  color: #fff;
+}
+.btn-success:hover, .btn-success:focus {
+  background-color: var(--of-teal-dark);
+  border-color: var(--of-teal-dark);
+  color: #fff;
+}
+
+/* ── Rank badges (leaderboard) ──────────────────────────── */
+.rank-badge {
+  display: inline-block;
+  min-width: 2.1rem;
+  text-align: center;
+  background-color: var(--of-blue);
+  color: #fff;
+  border-radius: 50px;
+  padding: 0.2em 0.6em;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+.rank-badge.gold   { background-color: #f59e0b; color: #000; }
+.rank-badge.silver { background-color: #94a3b8; color: #000; }
+.rank-badge.bronze { background-color: #b45309; color: #fff; }
+
+/* ── Team member chips ──────────────────────────────────── */
+.member-chip {
+  display: inline-block;
+  background-color: #dbeafe;
+  color: #1e40af;
+  border-radius: 50px;
+  padding: 0.22em 0.75em;
+  font-size: 0.81rem;
+  margin: 2px 3px 2px 0;
+  border: 1px solid #93c5fd;
+  font-weight: 500;
+}
+
+/* ── Workout suggestion chips ───────────────────────────── */
+.suggestion-chip {
+  display: inline-block;
+  background-color: #dcfce7;
+  color: #14532d;
+  border-radius: 50px;
+  padding: 0.22em 0.75em;
+  font-size: 0.81rem;
+  margin: 2px 3px 2px 0;
+  border: 1px solid #86efac;
+  font-weight: 500;
+}
+
+/* ── Team card overrides ─────────────────────────────────── */
+.card.border-primary {
+  border-color: #93c5fd !important;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.card.border-primary:hover {
+  box-shadow: 0 4px 18px rgba(13, 110, 253, 0.18);
+  transform: translateY(-2px);
+}
+
+/* ── Workout card overrides ──────────────────────────────── */
+.card.border-success {
+  border-color: #86efac !important;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.card.border-success:hover {
+  box-shadow: 0 4px 18px rgba(32, 201, 151, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ── Spinner ─────────────────────────────────────────────── */
+.octofit-spinner {
+  width: 3rem;
+  height: 3rem;
+  color: var(--of-blue);
+}
+
+/* ── Badge (team tag on Users table) ───────────────────── */
+.badge.bg-secondary {
+  background-color: #475569 !important;
+  font-weight: 500;
+  font-size: 0.78rem;
+  padding: 0.32em 0.65em;
+}
+
+/* ── Alert overrides ────────────────────────────────────── */
+.alert-danger {
+  background-color: #fee2e2;
+  border-color: #fca5a5;
+  color: #991b1b;
+}
+
+
+

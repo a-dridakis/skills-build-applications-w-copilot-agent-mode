@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" role="img" aria-label="OctoFit Tracker logo">
+  <!-- Dumbbell icon -->
+  <rect x="4"  y="22" width="10" height="16" rx="3" fill="#20c997"/>
+  <rect x="14" y="26" width="28" height="8"  rx="2" fill="#20c997"/>
+  <rect x="42" y="22" width="10" height="16" rx="3" fill="#20c997"/>
+
+  <!-- Octopus head (circle) -->
+  <circle cx="72" cy="28" r="13" fill="#0d6efd"/>
+  <!-- Octopus eyes -->
+  <circle cx="68" cy="26" r="2.5" fill="#fff"/>
+  <circle cx="76" cy="26" r="2.5" fill="#fff"/>
+  <circle cx="68.8" cy="26.8" r="1.2" fill="#0a2540"/>
+  <circle cx="76.8" cy="26.8" r="1.2" fill="#0a2540"/>
+  <!-- Octopus tentacles -->
+  <path d="M60 39 Q58 46 61 50" stroke="#0d6efd" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M64 41 Q63 48 65 52" stroke="#0d6efd" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M68 42 Q68 49 68 53" stroke="#0d6efd" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M72 42 Q73 49 71 53" stroke="#0d6efd" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M76 41 Q77 48 75 52" stroke="#0d6efd" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M80 40 Q82 46 79 50" stroke="#0d6efd" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- App name text -->
+  <text x="92" y="23" font-family="'Segoe UI',system-ui,sans-serif" font-size="17" font-weight="700" fill="#ffffff" letter-spacing="0.3">OctoFit</text>
+  <text x="92" y="40" font-family="'Segoe UI',system-ui,sans-serif" font-size="11" font-weight="400" fill="#20c997" letter-spacing="1.5">TRACKER</text>
+</svg>
